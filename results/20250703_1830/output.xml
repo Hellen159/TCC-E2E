@@ -1,0 +1,2500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.11.9 on win32)" generated="2025-07-03T18:30:19.574740" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\Hellen\Documents\GitHub\TCC-E2E\tests">
+<suite id="s1-s1" name="Login Tests" source="C:\Users\Hellen\Documents\GitHub\TCC-E2E\tests\login_tests.robot">
+<test id="s1-s1-t1" name="CT01_Login_com_Sucesso" line="21">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:30:19.984723" level="INFO">${full_url} = https://localhost:7138/Account/Login</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:30:19.984723" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:19.985722" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Login'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:30:19.985722" elapsed="2.050129"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:30:22.036862" elapsed="0.049095"/>
+</kw>
+<arg>${LOGIN_URL}</arg>
+<status status="PASS" start="2025-07-03T18:30:19.982721" elapsed="2.103236"/>
+</kw>
+<kw name="Fazer Login" owner="common_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:22.092763" level="INFO">Typing text '202016480' into text field 'id=Matricula'.</msg>
+<arg>id=Matricula</arg>
+<arg>${matricula}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:30:22.090982" elapsed="0.159660"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:22.251641" level="INFO">Typing text 'senha1234' into text field 'id=Senha'.</msg>
+<arg>id=Senha</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:30:22.250642" elapsed="0.085105"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:22.336755" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:30:22.336755" elapsed="0.541698"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${BASE_URL}${HOME_URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:30:22.879472" elapsed="0.095658"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:22.995134" level="INFO">Current page contains element 'tag=h2'.</msg>
+<arg>tag=h2</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:30:22.975130" elapsed="0.020004"/>
+</kw>
+<arg>${MATRICULA_VALIDA}</arg>
+<arg>${SENHA_VALIDA}</arg>
+<status status="PASS" start="2025-07-03T18:30:22.088968" elapsed="0.906166"/>
+</kw>
+<kw name="Verificar Redirecionamento Para Home" owner="common_keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=.grade-container</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:30:22.995134" elapsed="0.013229"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:30:22.995134" elapsed="0.013229"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Login efetuado e página inicial carregada com sucesso!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:30:23.008363" elapsed="0.000997"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:30:23.009360" elapsed="2.196695"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:30:19.981734" elapsed="5.224321"/>
+</test>
+<test id="s1-s1-t2" name="CT02_Login_Matricula_Vazia" line="26">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:30:25.211422" level="INFO">${full_url} = https://localhost:7138/Account/Login</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:30:25.210421" elapsed="0.001001"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:25.212422" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Login'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:30:25.212422" elapsed="1.833077"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:30:27.045499" elapsed="0.083173"/>
+</kw>
+<arg>${LOGIN_URL}</arg>
+<status status="PASS" start="2025-07-03T18:30:25.209423" elapsed="1.919249"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:27.147849" level="INFO">Typing text 'senha1234' into text field 'id=Senha'.</msg>
+<arg>id=Senha</arg>
+<arg>${SENHA_VALIDA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:30:27.144626" elapsed="0.168361"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:27.315819" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:30:27.314290" elapsed="0.182923"/>
+</kw>
+<kw name="Verificar Permanencia Na Pagina De Login" owner="common_keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=h3.form-title</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:30:27.499509" elapsed="0.074383"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:27.602614" level="INFO">Element 'css=h3.form-title' contains text 'Login'.</msg>
+<arg>css=h3.form-title</arg>
+<arg>Login</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:30:27.573892" elapsed="0.029840"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:32.628185" level="INFO">Current page does not contain element 'css=.grade-container'.</msg>
+<arg>css=.grade-container</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:30:27.603732" elapsed="5.024453"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:30:27.498494" elapsed="5.130775"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=span[data-valmsg-for='Matricula']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:30:32.630278" elapsed="0.039555"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:32.696874" level="INFO">Element 'css=span[data-valmsg-for='Matricula']' contains text 'A matrícula é obrigatória.'.</msg>
+<arg>css=span[data-valmsg-for='Matricula']</arg>
+<arg>${ERRO_MATRICULA_OBRIGATORIA_LOGIN}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:30:32.669833" elapsed="0.027041"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Teste de Matrícula Vazia: Falhou como esperado.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:30:32.697715" elapsed="0.001036"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:30:32.699742" elapsed="2.219823"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:30:25.208410" elapsed="9.712141"/>
+</test>
+<test id="s1-s1-t3" name="CT03_Login_Senha_Vazia" line="35">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:30:34.925543" level="INFO">${full_url} = https://localhost:7138/Account/Login</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:30:34.924543" elapsed="0.001000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:34.925543" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Login'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:30:34.925543" elapsed="2.019532"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:30:36.945075" elapsed="0.033510"/>
+</kw>
+<arg>${LOGIN_URL}</arg>
+<status status="PASS" start="2025-07-03T18:30:34.923535" elapsed="2.055050"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:36.980584" level="INFO">Typing text '202016480' into text field 'id=Matricula'.</msg>
+<arg>id=Matricula</arg>
+<arg>${MATRICULA_VALIDA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:30:36.979587" elapsed="0.131625"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:37.113211" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:30:37.112213" elapsed="0.183877"/>
+</kw>
+<kw name="Verificar Permanencia Na Pagina De Login" owner="common_keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=h3.form-title</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:30:37.298085" elapsed="0.017013"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:37.346579" level="INFO">Element 'css=h3.form-title' contains text 'Login'.</msg>
+<arg>css=h3.form-title</arg>
+<arg>Login</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:30:37.315098" elapsed="0.031481"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:42.392474" level="INFO">Current page does not contain element 'css=.grade-container'.</msg>
+<arg>css=.grade-container</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:30:37.347604" elapsed="5.044870"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:30:37.297085" elapsed="5.095389"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=span[data-valmsg-for='Senha']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:30:42.393452" elapsed="0.029698"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:42.446262" level="INFO">Element 'css=span[data-valmsg-for='Senha']' contains text 'A senha é obrigatória.'.</msg>
+<arg>css=span[data-valmsg-for='Senha']</arg>
+<arg>${ERRO_SENHA_OBRIGATORIA_LOGIN}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:30:42.423150" elapsed="0.023112"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Teste de Senha Vazia: Falhou como esperado.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:30:42.447353" elapsed="0.001072"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:30:42.449497" elapsed="2.227112"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:30:34.922500" elapsed="9.754109"/>
+</test>
+<test id="s1-s1-t4" name="CT04_Login_Matricula_Invalida" line="44">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:30:44.681626" level="INFO">${full_url} = https://localhost:7138/Account/Login</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:30:44.681626" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:44.682623" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Login'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:30:44.682623" elapsed="1.911686"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:30:46.594309" elapsed="0.027920"/>
+</kw>
+<arg>${LOGIN_URL}</arg>
+<status status="PASS" start="2025-07-03T18:30:44.680624" elapsed="1.941605"/>
+</kw>
+<kw name="Preencher Credenciais E Clicar Login" owner="common_keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=Matricula</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:30:46.624215" elapsed="0.020560"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:46.646756" level="INFO">Typing text '999999999' into text field 'id=Matricula'.</msg>
+<arg>id=Matricula</arg>
+<arg>${matricula}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:30:46.645774" elapsed="0.122102"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:46.769893" level="INFO">Typing text 'senha1234' into text field 'id=Senha'.</msg>
+<arg>id=Senha</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:30:46.768890" elapsed="0.084415"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:46.853305" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:30:46.853305" elapsed="0.142850"/>
+</kw>
+<arg>${MATRICULA_INVALIDA}</arg>
+<arg>${SENHA_VALIDA}</arg>
+<status status="PASS" start="2025-07-03T18:30:46.623214" elapsed="0.372941"/>
+</kw>
+<kw name="Verificar Permanencia Na Pagina De Login" owner="common_keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=h3.form-title</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:30:46.999152" elapsed="0.072432"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:47.099647" level="INFO">Element 'css=h3.form-title' contains text 'Login'.</msg>
+<arg>css=h3.form-title</arg>
+<arg>Login</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:30:47.072574" elapsed="0.027073"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:52.166713" level="INFO">Current page does not contain element 'css=.grade-container'.</msg>
+<arg>css=.grade-container</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:30:47.099647" elapsed="5.067066"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:30:46.997155" elapsed="5.169558"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=div.alert.alert-danger</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:30:52.167705" elapsed="0.032182"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:52.228480" level="INFO">Element 'css=div.alert.alert-danger' contains text 'Usuário ou senha incorretos.'.</msg>
+<arg>css=div.alert.alert-danger</arg>
+<arg>${ERRO_CREDENCIAS_INVALIDAS}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:30:52.201896" elapsed="0.026584"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Teste de Matrícula Inválida: Falhou como esperado.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:30:52.229470" elapsed="0.001001"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:30:52.232473" elapsed="2.250366"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:30:44.678627" elapsed="9.804212"/>
+</test>
+<test id="s1-s1-t5" name="CT05_Login_Senha_Invalida" line="52">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:30:54.487931" level="INFO">${full_url} = https://localhost:7138/Account/Login</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:30:54.486928" elapsed="0.001003"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:54.488846" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Login'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:30:54.487931" elapsed="1.954542"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:30:56.442473" elapsed="0.069380"/>
+</kw>
+<arg>${LOGIN_URL}</arg>
+<status status="PASS" start="2025-07-03T18:30:54.485890" elapsed="2.025963"/>
+</kw>
+<kw name="Preencher Credenciais E Clicar Login" owner="common_keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=Matricula</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:30:56.520304" elapsed="0.056226"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:56.577529" level="INFO">Typing text '202016480' into text field 'id=Matricula'.</msg>
+<arg>id=Matricula</arg>
+<arg>${matricula}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:30:56.576530" elapsed="0.110281"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:56.688808" level="INFO">Typing text 'senhaerrada' into text field 'id=Senha'.</msg>
+<arg>id=Senha</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:30:56.687843" elapsed="0.096098"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:56.786076" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:30:56.785056" elapsed="0.414645"/>
+</kw>
+<arg>${MATRICULA_VALIDA}</arg>
+<arg>${SENHA_INVALIDA}</arg>
+<status status="PASS" start="2025-07-03T18:30:56.519309" elapsed="0.680392"/>
+</kw>
+<kw name="Verificar Permanencia Na Pagina De Login" owner="common_keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=h3.form-title</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:30:57.200960" elapsed="0.060624"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:30:57.287419" level="INFO">Element 'css=h3.form-title' contains text 'Login'.</msg>
+<arg>css=h3.form-title</arg>
+<arg>Login</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:30:57.261584" elapsed="0.025835"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:02.317770" level="INFO">Current page does not contain element 'css=.grade-container'.</msg>
+<arg>css=.grade-container</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:30:57.288421" elapsed="5.030349"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:30:57.200960" elapsed="5.117810"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=div.alert.alert-danger</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:02.319776" elapsed="0.028903"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:02.375881" level="INFO">Element 'css=div.alert.alert-danger' contains text 'Usuário ou senha incorretos.'.</msg>
+<arg>css=div.alert.alert-danger</arg>
+<arg>${ERRO_CREDENCIAS_INVALIDAS}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:02.349444" elapsed="0.027435"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Teste de Senha Inválida: Falhou como esperado.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:31:02.376879" elapsed="0.000999"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:31:02.378875" elapsed="2.238129"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:30:54.484837" elapsed="10.133167"/>
+</test>
+<test id="s1-s1-t6" name="CT06_Login_Campos_Vazios" line="60">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:04.622097" level="INFO">${full_url} = https://localhost:7138/Account/Login</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:04.622097" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:04.623092" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Login'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:31:04.623092" elapsed="1.957135"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:31:06.580227" elapsed="0.046569"/>
+</kw>
+<arg>${LOGIN_URL}</arg>
+<status status="PASS" start="2025-07-03T18:31:04.621093" elapsed="2.005703"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:06.628800" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:06.627811" elapsed="0.159794"/>
+</kw>
+<kw name="Verificar Permanencia Na Pagina De Login" owner="common_keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=h3.form-title</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:31:06.788851" elapsed="0.065042"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:06.882227" level="INFO">Element 'css=h3.form-title' contains text 'Login'.</msg>
+<arg>css=h3.form-title</arg>
+<arg>Login</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:06.855206" elapsed="0.027021"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:11.894865" level="INFO">Current page does not contain element 'css=.grade-container'.</msg>
+<arg>css=.grade-container</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:31:06.883227" elapsed="5.011638"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:31:06.787605" elapsed="5.107260"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=span[data-valmsg-for='Matricula']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:11.895758" elapsed="0.032290"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:11.949862" level="INFO">Element 'css=span[data-valmsg-for='Matricula']' contains text 'A matrícula é obrigatória.'.</msg>
+<arg>css=span[data-valmsg-for='Matricula']</arg>
+<arg>${ERRO_MATRICULA_OBRIGATORIA_LOGIN}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:11.929043" elapsed="0.020819"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=span[data-valmsg-for='Senha']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:11.950994" elapsed="0.022514"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:11.995005" level="INFO">Element 'css=span[data-valmsg-for='Senha']' contains text 'A senha é obrigatória.'.</msg>
+<arg>css=span[data-valmsg-for='Senha']</arg>
+<arg>${ERRO_SENHA_OBRIGATORIA_LOGIN}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:11.973508" elapsed="0.021497"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Teste de Campos Vazios: Falhou como esperado.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:31:11.995996" elapsed="0.001001"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:31:11.998004" elapsed="2.203213"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:31:04.619001" elapsed="9.583149"/>
+</test>
+<test id="s1-s1-t7" name="CT07_Esqueceu_Senha_Email_Valido" line="70">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:14.206177" level="INFO">${full_url} = https://localhost:7138/Account/Login</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:14.205178" elapsed="0.000999"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:14.207179" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Login'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:31:14.206177" elapsed="1.887970"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:31:16.094147" elapsed="0.046654"/>
+</kw>
+<arg>${LOGIN_URL}</arg>
+<status status="PASS" start="2025-07-03T18:31:14.204176" elapsed="1.936625"/>
+</kw>
+<kw name="Clicar Link Esqueceu Senha" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>link=Clique aqui</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:16.142004" elapsed="0.029711"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:16.172716" level="INFO">Clicking link 'link=Clique aqui'.</msg>
+<arg>link=Clique aqui</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:16.172716" elapsed="0.098934"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:31:16.140801" elapsed="0.130849"/>
+</kw>
+<kw name="Preencher Email NoModal De Recuperacao" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=input[placeholder="Digite seu Email"]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:16.273653" elapsed="0.246793"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:16.521452" level="INFO">Typing text '202016480@aluno.unb.br' into text field 'css=input[placeholder="Digite seu Email"]'.</msg>
+<arg>css=input[placeholder="Digite seu Email"]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:16.521452" elapsed="0.144440"/>
+</kw>
+<arg>${EMAIL_VALIDO_RECUPERACAO}</arg>
+<status status="PASS" start="2025-07-03T18:31:16.272652" elapsed="0.393240"/>
+</kw>
+<kw name="Clicar Botao Enviar NoModal De Recuperacao" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@class='modal-content']//button[text()='Enviar']</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:16.667071" elapsed="0.022323"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:16.690396" level="INFO">Clicking element 'xpath=//div[@class='modal-content']//button[text()='Enviar']'.</msg>
+<arg>xpath=//div[@class='modal-content']//button[text()='Enviar']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:16.689394" elapsed="0.068085"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:31:16.665892" elapsed="0.091587"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=div.alert.alert-success</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:16.758463" elapsed="4.549453"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:21.336860" level="INFO">Element 'css=div.alert.alert-success' contains text 'Se o e-mail estiver cadastrado, você receberá um link de redefinição de senha.'.</msg>
+<arg>css=div.alert.alert-success</arg>
+<arg>${MENSAGEM_RECUPERACAO_SUCESSO_OU_GENERICA}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:21.308863" elapsed="0.027997"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Solicitação de recuperação de senha para email válido processada.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:31:21.337862" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:31:21.338863" elapsed="2.202248"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:31:14.203164" elapsed="9.338360"/>
+</test>
+<test id="s1-s1-t8" name="CT08_Esqueceu_Senha_Email_Invalido" line="80">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:23.546079" level="INFO">${full_url} = https://localhost:7138/Account/Login</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:23.545079" elapsed="0.001000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:23.547078" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Login'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:31:23.546079" elapsed="1.878936"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:31:25.425015" elapsed="0.048172"/>
+</kw>
+<arg>${LOGIN_URL}</arg>
+<status status="PASS" start="2025-07-03T18:31:23.544074" elapsed="1.929113"/>
+</kw>
+<kw name="Clicar Link Esqueceu Senha" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>link=Clique aqui</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:25.475454" elapsed="0.035288"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:25.511756" level="INFO">Clicking link 'link=Clique aqui'.</msg>
+<arg>link=Clique aqui</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:25.510742" elapsed="0.117626"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:31:25.474431" elapsed="0.153937"/>
+</kw>
+<kw name="Preencher Email NoModal De Recuperacao" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=input[placeholder="Digite seu Email"]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:25.629484" elapsed="0.252986"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:25.883489" level="INFO">Typing text '202016480@aluno.unb.brqqqqq' into text field 'css=input[placeholder="Digite seu Email"]'.</msg>
+<arg>css=input[placeholder="Digite seu Email"]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:25.882470" elapsed="0.161262"/>
+</kw>
+<arg>${EMAIL_INVALIDO_RECUPERACAO}</arg>
+<status status="PASS" start="2025-07-03T18:31:25.628368" elapsed="0.415364"/>
+</kw>
+<kw name="Clicar Botao Enviar NoModal De Recuperacao" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@class='modal-content']//button[text()='Enviar']</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:26.046187" elapsed="0.031824"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:26.079039" level="INFO">Clicking element 'xpath=//div[@class='modal-content']//button[text()='Enviar']'.</msg>
+<arg>xpath=//div[@class='modal-content']//button[text()='Enviar']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:26.078011" elapsed="0.095309"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:31:26.046187" elapsed="0.128138"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=div.alert.alert-success</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:26.175329" elapsed="0.164691"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:26.371136" level="INFO">Element 'css=div.alert.alert-success' contains text 'Se o e-mail estiver cadastrado, você receberá um link de redefinição de senha.'.</msg>
+<arg>css=div.alert.alert-success</arg>
+<arg>${MENSAGEM_RECUPERACAO_SUCESSO_OU_GENERICA}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:26.340999" elapsed="0.030137"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Solicitação de recuperação de senha para email inválido processada.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:31:26.372135" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:31:26.373132" elapsed="2.300108"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:31:23.543073" elapsed="5.130167"/>
+</test>
+<status status="PASS" start="2025-07-03T18:30:19.616761" elapsed="69.059484"/>
+</suite>
+<suite id="s1-s2" name="Register Tests" source="C:\Users\Hellen\Documents\GitHub\TCC-E2E\tests\register_tests.robot">
+<test id="s1-s2-t1" name="CT01_Registro_de_Novo_Usuario_com_Sucesso" line="21">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:28.819084" level="INFO">${full_url} = https://localhost:7138/Account/Register</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:28.817963" elapsed="0.001121"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:28.820156" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Register'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:31:28.819084" elapsed="1.812374"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:31:30.632458" elapsed="0.055707"/>
+</kw>
+<arg>${REGISTER_URL}</arg>
+<status status="PASS" start="2025-07-03T18:31:28.816965" elapsed="1.871200"/>
+</kw>
+<kw name="Gerar Dados De Registro" owner="common_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:31:30.690178" level="INFO">${NOME_COMPLETO} = OeySbUHfrIzoewm</msg>
+<var>${NOME_COMPLETO}</var>
+<arg>15</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:31:30.690178" elapsed="0.000000"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-07-03T18:31:30.691182" level="INFO">${TIMESTAMP} = 20250703183130</msg>
+<var>${TIMESTAMP}</var>
+<arg>result_format=%Y%m%d%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-07-03T18:31:30.691182" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:30.692183" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183130@robotframework.com</msg>
+<var>${EMAIL_ALEATORIO}</var>
+<arg>SEPARATOR=</arg>
+<arg>teste_</arg>
+<arg>${TIMESTAMP}</arg>
+<arg>@robotframework.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:30.691182" elapsed="0.001001"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:31:30.692183" level="INFO">${SENHA_ALEATORIA} = YBPDX[Cllf</msg>
+<var>${SENHA_ALEATORIA}</var>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS][SYMBOLS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:31:30.692183" elapsed="0.000997"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:30.693180" level="INFO">${MATRICULA_ALEATORIA} = 155137381</msg>
+<var>${MATRICULA_ALEATORIA}</var>
+<arg>random.randint(100000000, 999999999)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:30.693180" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:30.694178" level="INFO">${SEMESTRE_ALEATORIO} = 02</msg>
+<var>${SEMESTRE_ALEATORIO}</var>
+<arg>random.choice(['01', '02'])</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:30.693180" elapsed="0.000998"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:30.694178" level="INFO">${ANO_ALEATORIO} = 2016</msg>
+<var>${ANO_ALEATORIO}</var>
+<arg>random.randint(2015, 2025)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:30.694178" elapsed="0.000000"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-07-03T18:31:30.695179" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${NOME_COMPLETO}</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-07-03T18:31:30.695179" elapsed="0.000000"/>
+</kw>
+<msg time="2025-07-03T18:31:30.696177" level="INFO">${NOME_COMPLETO} = OeySbUHfrIzoewm</msg>
+<msg time="2025-07-03T18:31:30.696177" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183130@robotframework.com</msg>
+<msg time="2025-07-03T18:31:30.696177" level="INFO">${SENHA_ALEATORIA} = YBPDX[Cllf</msg>
+<msg time="2025-07-03T18:31:30.696177" level="INFO">${MATRICULA_ALEATORIA} = 155137381</msg>
+<msg time="2025-07-03T18:31:30.696177" level="INFO">${SEMESTRE_ALEATORIO} = 02</msg>
+<msg time="2025-07-03T18:31:30.696177" level="INFO">${ANO_ALEATORIO} = 2016</msg>
+<var>${NOME_COMPLETO}</var>
+<var>${EMAIL_ALEATORIO}</var>
+<var>${SENHA_ALEATORIA}</var>
+<var>${MATRICULA_ALEATORIA}</var>
+<var>${SEMESTRE_ALEATORIO}</var>
+<var>${ANO_ALEATORIO}</var>
+<status status="PASS" start="2025-07-03T18:31:30.689181" elapsed="0.006996"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:30.697185" level="INFO">Typing text 'OeySbUHfrIzoewm' into text field 'id=Nome'.</msg>
+<arg>id=Nome</arg>
+<arg>${NOME_COMPLETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:30.696177" elapsed="0.160540"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:30.858136" level="INFO">Typing text 'teste_20250703183130@robotframework.com' into text field 'id=Email'.</msg>
+<arg>id=Email</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:30.858136" elapsed="0.128873"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:30.988009" level="INFO">Selecting options from selection list 'id=SemestreEntrada' by value 02.</msg>
+<arg>id=SemestreEntrada</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:31:30.987009" elapsed="0.083664"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:31.071673" level="INFO">Selecting options from selection list 'id=AnoEntrada' by value 2016.</msg>
+<arg>id=AnoEntrada</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:31:31.071673" elapsed="0.083359"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:31.157051" level="INFO">Typing text 'YBPDX[Cllf' into text field 'id=Senha'.</msg>
+<arg>id=Senha</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:31.156049" elapsed="0.114713"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:31.272852" level="INFO">Typing text 'YBPDX[Cllf' into text field 'id=ConfirmacaoSenha'.</msg>
+<arg>id=ConfirmacaoSenha</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:31.271844" elapsed="0.090182"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:31.363201" level="INFO">Typing text '155137381' into text field 'id=Matricula'.</msg>
+<arg>id=Matricula</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:31.362026" elapsed="0.081045"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:31.444072" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:31.444072" elapsed="0.493982"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=h3.form-title</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:31:31.938054" elapsed="0.068212"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:32.029266" level="INFO">Element 'css=h3.form-title' contains text 'Login'.</msg>
+<arg>css=h3.form-title</arg>
+<arg>Login</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:32.006266" elapsed="0.023000"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:32.053265" level="INFO">Current page contains text 'Não tem uma conta? Fazer Registro'.</msg>
+<arg>Não tem uma conta? Fazer Registro</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-07-03T18:31:32.030288" elapsed="0.022977"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Novo usuário registrado com sucesso: Email=${EMAIL_ALEATORIO}, Matrícula=${MATRICULA_ALEATORIA}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:31:32.054275" elapsed="0.000995"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:31:32.055270" elapsed="2.208275"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:31:28.814963" elapsed="5.448582"/>
+</test>
+<test id="s1-s2-t2" name="CT02_Registro_Nome_Completo_Nao_Preenchido" line="44">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:34.267642" level="INFO">${full_url} = https://localhost:7138/Account/Register</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:34.267642" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:34.268630" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Register'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:31:34.268630" elapsed="1.919325"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.187955" elapsed="0.043003"/>
+</kw>
+<arg>${REGISTER_URL}</arg>
+<status status="PASS" start="2025-07-03T18:31:34.266624" elapsed="1.964334"/>
+</kw>
+<kw name="Gerar Dados De Registro" owner="common_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:31:36.232964" level="INFO">${NOME_COMPLETO} = DR8oN3w2XyuEXdx</msg>
+<var>${NOME_COMPLETO}</var>
+<arg>15</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.232964" elapsed="0.000000"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-07-03T18:31:36.233966" level="INFO">${TIMESTAMP} = 20250703183136</msg>
+<var>${TIMESTAMP}</var>
+<arg>result_format=%Y%m%d%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.233966" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:36.234957" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183136@robotframework.com</msg>
+<var>${EMAIL_ALEATORIO}</var>
+<arg>SEPARATOR=</arg>
+<arg>teste_</arg>
+<arg>${TIMESTAMP}</arg>
+<arg>@robotframework.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.233966" elapsed="0.000991"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:31:36.234957" level="INFO">${SENHA_ALEATORIA} = f5kSxGFSbf</msg>
+<var>${SENHA_ALEATORIA}</var>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS][SYMBOLS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.234957" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:36.235958" level="INFO">${MATRICULA_ALEATORIA} = 787565926</msg>
+<var>${MATRICULA_ALEATORIA}</var>
+<arg>random.randint(100000000, 999999999)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.234957" elapsed="0.001001"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:36.237959" level="INFO">${SEMESTRE_ALEATORIO} = 02</msg>
+<var>${SEMESTRE_ALEATORIO}</var>
+<arg>random.choice(['01', '02'])</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.236977" elapsed="0.000982"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:36.238959" level="INFO">${ANO_ALEATORIO} = 2022</msg>
+<var>${ANO_ALEATORIO}</var>
+<arg>random.randint(2015, 2025)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.238959" elapsed="0.000000"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-07-03T18:31:36.239958" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${NOME_COMPLETO}</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.239958" elapsed="0.000000"/>
+</kw>
+<msg time="2025-07-03T18:31:36.241209" level="INFO">${NOME_COMPLETO} = DR8oN3w2XyuEXdx</msg>
+<msg time="2025-07-03T18:31:36.241209" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183136@robotframework.com</msg>
+<msg time="2025-07-03T18:31:36.241209" level="INFO">${SENHA_ALEATORIA} = f5kSxGFSbf</msg>
+<msg time="2025-07-03T18:31:36.241209" level="INFO">${MATRICULA_ALEATORIA} = 787565926</msg>
+<msg time="2025-07-03T18:31:36.241209" level="INFO">${SEMESTRE_ALEATORIO} = 02</msg>
+<msg time="2025-07-03T18:31:36.241209" level="INFO">${ANO_ALEATORIO} = 2022</msg>
+<var>${NOME_COMPLETO}</var>
+<var>${EMAIL_ALEATORIO}</var>
+<var>${SENHA_ALEATORIA}</var>
+<var>${MATRICULA_ALEATORIA}</var>
+<var>${SEMESTRE_ALEATORIO}</var>
+<var>${ANO_ALEATORIO}</var>
+<status status="PASS" start="2025-07-03T18:31:36.231958" elapsed="0.010274"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:36.243232" level="INFO">Typing text 'teste_20250703183136@robotframework.com' into text field 'id=Email'.</msg>
+<arg>id=Email</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.242232" elapsed="0.183677"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:36.427999" level="INFO">Selecting options from selection list 'id=SemestreEntrada' by value 02.</msg>
+<arg>id=SemestreEntrada</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.426994" elapsed="0.105872"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:36.542884" level="INFO">Selecting options from selection list 'id=AnoEntrada' by value 2022.</msg>
+<arg>id=AnoEntrada</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.541881" elapsed="0.089619"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:36.632497" level="INFO">Typing text 'f5kSxGFSbf' into text field 'id=Senha'.</msg>
+<arg>id=Senha</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.632497" elapsed="0.081666"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:36.715161" level="INFO">Typing text 'f5kSxGFSbf' into text field 'id=ConfirmacaoSenha'.</msg>
+<arg>id=ConfirmacaoSenha</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.714163" elapsed="0.088594"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:36.803755" level="INFO">Typing text '787565926' into text field 'id=Matricula'.</msg>
+<arg>id=Matricula</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.803755" elapsed="0.083401"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:36.888547" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:36.888547" elapsed="0.183301"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=h3.form-title</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:31:37.073863" elapsed="0.014448"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:37.120596" level="INFO">Element 'css=h3.form-title' contains text 'Formulário de Registro'.</msg>
+<arg>css=h3.form-title</arg>
+<arg>Formulário de Registro</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:37.089310" elapsed="0.031286"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=span[data-valmsg-for='Nome']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:37.121592" elapsed="0.026218"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:37.168068" level="INFO">Element 'css=span[data-valmsg-for='Nome']' contains text 'O campo Nome Completo é obrigatório.'.</msg>
+<arg>css=span[data-valmsg-for='Nome']</arg>
+<arg>${ERRO_NOME_OBRIGATORIO}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:37.148854" elapsed="0.019214"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Teste de Nome Vazio: Falhou como esperado.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:31:37.169067" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:31:37.170066" elapsed="2.208303"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:31:34.265540" elapsed="5.113775"/>
+</test>
+<test id="s1-s2-t3" name="CT03_Registro_Email_Nao_Preenchido" line="69">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:39.383415" level="INFO">${full_url} = https://localhost:7138/Account/Register</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:39.383415" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:39.384408" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Register'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:31:39.384408" elapsed="2.001831"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.386239" elapsed="0.040157"/>
+</kw>
+<arg>${REGISTER_URL}</arg>
+<status status="PASS" start="2025-07-03T18:31:39.381425" elapsed="2.044971"/>
+</kw>
+<kw name="Gerar Dados De Registro" owner="common_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:31:41.429379" level="INFO">${NOME_COMPLETO} = 2Oc5Ibm9876Wt0B</msg>
+<var>${NOME_COMPLETO}</var>
+<arg>15</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.428363" elapsed="0.001016"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-07-03T18:31:41.430371" level="INFO">${TIMESTAMP} = 20250703183141</msg>
+<var>${TIMESTAMP}</var>
+<arg>result_format=%Y%m%d%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.430371" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:41.431376" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183141@robotframework.com</msg>
+<var>${EMAIL_ALEATORIO}</var>
+<arg>SEPARATOR=</arg>
+<arg>teste_</arg>
+<arg>${TIMESTAMP}</arg>
+<arg>@robotframework.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.430371" elapsed="0.001005"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:31:41.431376" level="INFO">${SENHA_ALEATORIA} = SYL3wD[Ho[</msg>
+<var>${SENHA_ALEATORIA}</var>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS][SYMBOLS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.431376" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:41.432375" level="INFO">${MATRICULA_ALEATORIA} = 376586820</msg>
+<var>${MATRICULA_ALEATORIA}</var>
+<arg>random.randint(100000000, 999999999)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.431376" elapsed="0.000999"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:41.433389" level="INFO">${SEMESTRE_ALEATORIO} = 02</msg>
+<var>${SEMESTRE_ALEATORIO}</var>
+<arg>random.choice(['01', '02'])</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.432375" elapsed="0.001014"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:41.434388" level="INFO">${ANO_ALEATORIO} = 2019</msg>
+<var>${ANO_ALEATORIO}</var>
+<arg>random.randint(2015, 2025)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.434388" elapsed="0.000000"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-07-03T18:31:41.435388" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${NOME_COMPLETO}</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.435388" elapsed="0.000000"/>
+</kw>
+<msg time="2025-07-03T18:31:41.437379" level="INFO">${NOME_COMPLETO} = 2Oc5Ibm9876Wt0B</msg>
+<msg time="2025-07-03T18:31:41.437379" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183141@robotframework.com</msg>
+<msg time="2025-07-03T18:31:41.437379" level="INFO">${SENHA_ALEATORIA} = SYL3wD[Ho[</msg>
+<msg time="2025-07-03T18:31:41.437379" level="INFO">${MATRICULA_ALEATORIA} = 376586820</msg>
+<msg time="2025-07-03T18:31:41.437379" level="INFO">${SEMESTRE_ALEATORIO} = 02</msg>
+<msg time="2025-07-03T18:31:41.437379" level="INFO">${ANO_ALEATORIO} = 2019</msg>
+<var>${NOME_COMPLETO}</var>
+<var>${EMAIL_ALEATORIO}</var>
+<var>${SENHA_ALEATORIA}</var>
+<var>${MATRICULA_ALEATORIA}</var>
+<var>${SEMESTRE_ALEATORIO}</var>
+<var>${ANO_ALEATORIO}</var>
+<status status="PASS" start="2025-07-03T18:31:41.427852" elapsed="0.009527"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:41.438376" level="INFO">Typing text '2Oc5Ibm9876Wt0B' into text field 'id=Nome'.</msg>
+<arg>id=Nome</arg>
+<arg>${NOME_COMPLETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.437379" elapsed="0.184824"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:41.624214" level="INFO">Selecting options from selection list 'id=SemestreEntrada' by value 02.</msg>
+<arg>id=SemestreEntrada</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.623215" elapsed="0.087048"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:41.712271" level="INFO">Selecting options from selection list 'id=AnoEntrada' by value 2019.</msg>
+<arg>id=AnoEntrada</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.711274" elapsed="0.071176"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:41.783453" level="INFO">Typing text 'SYL3wD[Ho[' into text field 'id=Senha'.</msg>
+<arg>id=Senha</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.782450" elapsed="0.108625"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:41.892542" level="INFO">Typing text 'SYL3wD[Ho[' into text field 'id=ConfirmacaoSenha'.</msg>
+<arg>id=ConfirmacaoSenha</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.892542" elapsed="0.095905"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:41.989932" level="INFO">Typing text '376586820' into text field 'id=Matricula'.</msg>
+<arg>id=Matricula</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:41.989932" elapsed="0.093812"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:42.085741" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:42.084742" elapsed="0.112384"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=h3.form-title</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:31:42.198628" elapsed="0.066126"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:42.289460" level="INFO">Element 'css=h3.form-title' contains text 'Formulário de Registro'.</msg>
+<arg>css=h3.form-title</arg>
+<arg>Formulário de Registro</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:42.264754" elapsed="0.024706"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=span[data-valmsg-for='Email']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:42.290440" elapsed="0.031563"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:42.343166" level="INFO">Element 'css=span[data-valmsg-for='Email']' contains text 'O campo Email é obrigatório.'.</msg>
+<arg>css=span[data-valmsg-for='Email']</arg>
+<arg>${ERRO_EMAIL_OBRIGATORIO}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:42.323007" elapsed="0.020159"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Teste de Email Vazio: Falhou como esperado.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:31:42.344157" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:31:42.346309" elapsed="2.231125"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:31:39.380407" elapsed="5.198018"/>
+</test>
+<test id="s1-s2-t4" name="CT04_Registro_Semestre_Entrada_Nao_Preenchido" line="94">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:44.583433" level="INFO">${full_url} = https://localhost:7138/Account/Register</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:44.583433" elapsed="0.001041"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:44.585520" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Register'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:31:44.584474" elapsed="1.563521"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:31:46.147995" elapsed="0.456529"/>
+</kw>
+<arg>${REGISTER_URL}</arg>
+<status status="PASS" start="2025-07-03T18:31:44.581429" elapsed="2.024091"/>
+</kw>
+<kw name="Gerar Dados De Registro" owner="common_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:31:46.608511" level="INFO">${NOME_COMPLETO} = nQdd79rudHEHsCK</msg>
+<var>${NOME_COMPLETO}</var>
+<arg>15</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:31:46.607523" elapsed="0.000988"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-07-03T18:31:46.609511" level="INFO">${TIMESTAMP} = 20250703183146</msg>
+<var>${TIMESTAMP}</var>
+<arg>result_format=%Y%m%d%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-07-03T18:31:46.608511" elapsed="0.001000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:46.610518" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183146@robotframework.com</msg>
+<var>${EMAIL_ALEATORIO}</var>
+<arg>SEPARATOR=</arg>
+<arg>teste_</arg>
+<arg>${TIMESTAMP}</arg>
+<arg>@robotframework.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:46.609511" elapsed="0.001007"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:31:46.611512" level="INFO">${SENHA_ALEATORIA} = Y4kOTO[TS]</msg>
+<var>${SENHA_ALEATORIA}</var>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS][SYMBOLS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:31:46.610518" elapsed="0.000994"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:46.612519" level="INFO">${MATRICULA_ALEATORIA} = 167975512</msg>
+<var>${MATRICULA_ALEATORIA}</var>
+<arg>random.randint(100000000, 999999999)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:46.611512" elapsed="0.001007"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:46.613749" level="INFO">${SEMESTRE_ALEATORIO} = 01</msg>
+<var>${SEMESTRE_ALEATORIO}</var>
+<arg>random.choice(['01', '02'])</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:46.612519" elapsed="0.001230"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:46.613749" level="INFO">${ANO_ALEATORIO} = 2024</msg>
+<var>${ANO_ALEATORIO}</var>
+<arg>random.randint(2015, 2025)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:46.613749" elapsed="0.000000"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-07-03T18:31:46.614760" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${NOME_COMPLETO}</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-07-03T18:31:46.614760" elapsed="0.000000"/>
+</kw>
+<msg time="2025-07-03T18:31:46.615767" level="INFO">${NOME_COMPLETO} = nQdd79rudHEHsCK</msg>
+<msg time="2025-07-03T18:31:46.616773" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183146@robotframework.com</msg>
+<msg time="2025-07-03T18:31:46.616773" level="INFO">${SENHA_ALEATORIA} = Y4kOTO[TS]</msg>
+<msg time="2025-07-03T18:31:46.616773" level="INFO">${MATRICULA_ALEATORIA} = 167975512</msg>
+<msg time="2025-07-03T18:31:46.616773" level="INFO">${SEMESTRE_ALEATORIO} = 01</msg>
+<msg time="2025-07-03T18:31:46.616773" level="INFO">${ANO_ALEATORIO} = 2024</msg>
+<var>${NOME_COMPLETO}</var>
+<var>${EMAIL_ALEATORIO}</var>
+<var>${SENHA_ALEATORIA}</var>
+<var>${MATRICULA_ALEATORIA}</var>
+<var>${SEMESTRE_ALEATORIO}</var>
+<var>${ANO_ALEATORIO}</var>
+<status status="PASS" start="2025-07-03T18:31:46.606522" elapsed="0.010251"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:46.639689" level="INFO">Typing text 'nQdd79rudHEHsCK' into text field 'id=Nome'.</msg>
+<arg>id=Nome</arg>
+<arg>${NOME_COMPLETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:46.639689" elapsed="0.134190"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:46.775117" level="INFO">Typing text 'teste_20250703183146@robotframework.com' into text field 'id=Email'.</msg>
+<arg>id=Email</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:46.773879" elapsed="0.224924"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:46.999817" level="INFO">Selecting options from selection list 'id=AnoEntrada' by value 2024.</msg>
+<arg>id=AnoEntrada</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:31:46.998803" elapsed="0.088887"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:47.090043" level="INFO">Typing text 'Y4kOTO[TS]' into text field 'id=Senha'.</msg>
+<arg>id=Senha</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:47.088992" elapsed="0.133049"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:47.223195" level="INFO">Typing text 'Y4kOTO[TS]' into text field 'id=ConfirmacaoSenha'.</msg>
+<arg>id=ConfirmacaoSenha</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:47.223195" elapsed="0.091244"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:47.315438" level="INFO">Typing text '167975512' into text field 'id=Matricula'.</msg>
+<arg>id=Matricula</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:47.314439" elapsed="0.098684"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:47.414156" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:47.414156" elapsed="0.114568"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=h3.form-title</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:31:47.529704" elapsed="0.077305"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:47.647572" level="INFO">Element 'css=h3.form-title' contains text 'Formulário de Registro'.</msg>
+<arg>css=h3.form-title</arg>
+<arg>Formulário de Registro</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:47.608010" elapsed="0.040560"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=span[data-valmsg-for='SemestreEntrada']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:47.648570" elapsed="0.029031"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:47.699160" level="INFO">Element 'css=span[data-valmsg-for='SemestreEntrada']' contains text 'Este campo precisa ser preenchido.'.</msg>
+<arg>css=span[data-valmsg-for='SemestreEntrada']</arg>
+<arg>${ERRO_SEMESTRE_OBRIGATORIO}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:47.678596" elapsed="0.020564"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Teste de Semestre Vazio: Falhou como esperado.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:31:47.700170" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:31:47.702159" elapsed="2.200420"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:31:44.580431" elapsed="5.322148"/>
+</test>
+<test id="s1-s2-t5" name="CT05_Registro_Ano_Entrada_Nao_Preenchido" line="117">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:49.907580" level="INFO">${full_url} = https://localhost:7138/Account/Register</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:49.906581" elapsed="0.000999"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:49.908579" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Register'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:31:49.907580" elapsed="1.942140"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:31:51.849720" elapsed="0.048304"/>
+</kw>
+<arg>${REGISTER_URL}</arg>
+<status status="PASS" start="2025-07-03T18:31:49.905577" elapsed="1.992447"/>
+</kw>
+<kw name="Gerar Dados De Registro" owner="common_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:31:51.902034" level="INFO">${NOME_COMPLETO} = 68YOdLyCIXvJvuN</msg>
+<var>${NOME_COMPLETO}</var>
+<arg>15</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:31:51.900032" elapsed="0.002002"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-07-03T18:31:51.903035" level="INFO">${TIMESTAMP} = 20250703183151</msg>
+<var>${TIMESTAMP}</var>
+<arg>result_format=%Y%m%d%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-07-03T18:31:51.902034" elapsed="0.001001"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:51.904050" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183151@robotframework.com</msg>
+<var>${EMAIL_ALEATORIO}</var>
+<arg>SEPARATOR=</arg>
+<arg>teste_</arg>
+<arg>${TIMESTAMP}</arg>
+<arg>@robotframework.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:51.903035" elapsed="0.001015"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:31:51.905052" level="INFO">${SENHA_ALEATORIA} = y1B3BVKh]8</msg>
+<var>${SENHA_ALEATORIA}</var>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS][SYMBOLS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:31:51.904050" elapsed="0.001002"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:51.905052" level="INFO">${MATRICULA_ALEATORIA} = 319624570</msg>
+<var>${MATRICULA_ALEATORIA}</var>
+<arg>random.randint(100000000, 999999999)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:51.905052" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:51.906033" level="INFO">${SEMESTRE_ALEATORIO} = 01</msg>
+<var>${SEMESTRE_ALEATORIO}</var>
+<arg>random.choice(['01', '02'])</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:51.906033" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:51.906033" level="INFO">${ANO_ALEATORIO} = 2016</msg>
+<var>${ANO_ALEATORIO}</var>
+<arg>random.randint(2015, 2025)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:51.906033" elapsed="0.000000"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-07-03T18:31:51.907057" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${NOME_COMPLETO}</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-07-03T18:31:51.907057" elapsed="0.000000"/>
+</kw>
+<msg time="2025-07-03T18:31:51.907057" level="INFO">${NOME_COMPLETO} = 68YOdLyCIXvJvuN</msg>
+<msg time="2025-07-03T18:31:51.907057" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183151@robotframework.com</msg>
+<msg time="2025-07-03T18:31:51.907057" level="INFO">${SENHA_ALEATORIA} = y1B3BVKh]8</msg>
+<msg time="2025-07-03T18:31:51.907057" level="INFO">${MATRICULA_ALEATORIA} = 319624570</msg>
+<msg time="2025-07-03T18:31:51.907057" level="INFO">${SEMESTRE_ALEATORIO} = 01</msg>
+<msg time="2025-07-03T18:31:51.908035" level="INFO">${ANO_ALEATORIO} = 2016</msg>
+<var>${NOME_COMPLETO}</var>
+<var>${EMAIL_ALEATORIO}</var>
+<var>${SENHA_ALEATORIA}</var>
+<var>${MATRICULA_ALEATORIA}</var>
+<var>${SEMESTRE_ALEATORIO}</var>
+<var>${ANO_ALEATORIO}</var>
+<status status="PASS" start="2025-07-03T18:31:51.899033" elapsed="0.009002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:51.909033" level="INFO">Typing text '68YOdLyCIXvJvuN' into text field 'id=Nome'.</msg>
+<arg>id=Nome</arg>
+<arg>${NOME_COMPLETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:51.908035" elapsed="0.140489"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:52.050191" level="INFO">Typing text 'teste_20250703183151@robotframework.com' into text field 'id=Email'.</msg>
+<arg>id=Email</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:52.049185" elapsed="0.129310"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:52.181228" level="INFO">Selecting options from selection list 'id=SemestreEntrada' by value 01.</msg>
+<arg>id=SemestreEntrada</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:31:52.181228" elapsed="0.077953"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:52.260194" level="INFO">Typing text 'y1B3BVKh]8' into text field 'id=Senha'.</msg>
+<arg>id=Senha</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:52.259181" elapsed="0.157927"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:52.418117" level="INFO">Typing text 'y1B3BVKh]8' into text field 'id=ConfirmacaoSenha'.</msg>
+<arg>id=ConfirmacaoSenha</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:52.417108" elapsed="0.092424"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:52.511540" level="INFO">Typing text '319624570' into text field 'id=Matricula'.</msg>
+<arg>id=Matricula</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:52.510536" elapsed="0.069219"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:52.581231" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:52.581231" elapsed="0.167631"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=h3.form-title</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:31:52.750865" elapsed="0.020419"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:52.817256" level="INFO">Element 'css=h3.form-title' contains text 'Formulário de Registro'.</msg>
+<arg>css=h3.form-title</arg>
+<arg>Formulário de Registro</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:52.772259" elapsed="0.046000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=span[data-valmsg-for='AnoEntrada']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:52.819258" elapsed="0.036519"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:52.885506" level="INFO">Element 'css=span[data-valmsg-for='AnoEntrada']' contains text 'Este campo precisa ser preenchido.'.</msg>
+<arg>css=span[data-valmsg-for='AnoEntrada']</arg>
+<arg>${ERRO_ANO_OBRIGATORIO}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:52.856764" elapsed="0.029701"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Teste de Ano Vazio: Falhou como esperado.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:31:52.887470" elapsed="0.000999"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:31:52.888469" elapsed="2.235301"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:31:49.904578" elapsed="5.220233"/>
+</test>
+<test id="s1-s2-t6" name="CT06_Registro_Senha_Nao_Preenchida" line="140">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:55.129818" level="INFO">${full_url} = https://localhost:7138/Account/Register</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:55.128821" elapsed="0.000997"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:55.130840" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Register'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:31:55.129818" elapsed="1.903758"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.034582" elapsed="0.040068"/>
+</kw>
+<arg>${REGISTER_URL}</arg>
+<status status="PASS" start="2025-07-03T18:31:55.127805" elapsed="1.946845"/>
+</kw>
+<kw name="Gerar Dados De Registro" owner="common_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:31:57.076025" level="INFO">${NOME_COMPLETO} = atWQ86zw7gR9lT7</msg>
+<var>${NOME_COMPLETO}</var>
+<arg>15</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.076025" elapsed="0.001256"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-07-03T18:31:57.078295" level="INFO">${TIMESTAMP} = 20250703183157</msg>
+<var>${TIMESTAMP}</var>
+<arg>result_format=%Y%m%d%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.077281" elapsed="0.001014"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:57.078295" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183157@robotframework.com</msg>
+<var>${EMAIL_ALEATORIO}</var>
+<arg>SEPARATOR=</arg>
+<arg>teste_</arg>
+<arg>${TIMESTAMP}</arg>
+<arg>@robotframework.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.078295" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:31:57.079316" level="INFO">${SENHA_ALEATORIA} = WMyJU16igj</msg>
+<var>${SENHA_ALEATORIA}</var>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS][SYMBOLS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.079316" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:57.081295" level="INFO">${MATRICULA_ALEATORIA} = 234147434</msg>
+<var>${MATRICULA_ALEATORIA}</var>
+<arg>random.randint(100000000, 999999999)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.080294" elapsed="0.001001"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:57.082291" level="INFO">${SEMESTRE_ALEATORIO} = 02</msg>
+<var>${SEMESTRE_ALEATORIO}</var>
+<arg>random.choice(['01', '02'])</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.082291" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:31:57.083296" level="INFO">${ANO_ALEATORIO} = 2024</msg>
+<var>${ANO_ALEATORIO}</var>
+<arg>random.randint(2015, 2025)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.083296" elapsed="0.000000"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-07-03T18:31:57.083296" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${NOME_COMPLETO}</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.083296" elapsed="0.001007"/>
+</kw>
+<msg time="2025-07-03T18:31:57.084303" level="INFO">${NOME_COMPLETO} = atWQ86zw7gR9lT7</msg>
+<msg time="2025-07-03T18:31:57.084303" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183157@robotframework.com</msg>
+<msg time="2025-07-03T18:31:57.084303" level="INFO">${SENHA_ALEATORIA} = WMyJU16igj</msg>
+<msg time="2025-07-03T18:31:57.084303" level="INFO">${MATRICULA_ALEATORIA} = 234147434</msg>
+<msg time="2025-07-03T18:31:57.084303" level="INFO">${SEMESTRE_ALEATORIO} = 02</msg>
+<msg time="2025-07-03T18:31:57.084303" level="INFO">${ANO_ALEATORIO} = 2024</msg>
+<var>${NOME_COMPLETO}</var>
+<var>${EMAIL_ALEATORIO}</var>
+<var>${SENHA_ALEATORIA}</var>
+<var>${MATRICULA_ALEATORIA}</var>
+<var>${SEMESTRE_ALEATORIO}</var>
+<var>${ANO_ALEATORIO}</var>
+<status status="PASS" start="2025-07-03T18:31:57.074650" elapsed="0.009653"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:57.086314" level="INFO">Typing text 'atWQ86zw7gR9lT7' into text field 'id=Nome'.</msg>
+<arg>id=Nome</arg>
+<arg>${NOME_COMPLETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.085330" elapsed="0.141882"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:57.228228" level="INFO">Typing text 'teste_20250703183157@robotframework.com' into text field 'id=Email'.</msg>
+<arg>id=Email</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.228228" elapsed="0.123927"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:57.353337" level="INFO">Selecting options from selection list 'id=SemestreEntrada' by value 02.</msg>
+<arg>id=SemestreEntrada</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.353337" elapsed="0.078900"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:57.434248" level="INFO">Selecting options from selection list 'id=AnoEntrada' by value 2024.</msg>
+<arg>id=AnoEntrada</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.433237" elapsed="0.085333"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:57.520553" level="INFO">Typing text 'WMyJU16igj # Confirmação da Senha precisa ser preenchida para testar apenas a Senha' into text field 'id=ConfirmacaoSenha'.</msg>
+<arg>id=ConfirmacaoSenha</arg>
+<arg>${SENHA_ALEATORIA} # Confirmação da Senha precisa ser preenchida para testar apenas a Senha</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.519564" elapsed="0.175385"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:57.695949" level="INFO">Typing text '234147434' into text field 'id=Matricula'.</msg>
+<arg>id=Matricula</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.694949" elapsed="0.078857"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:57.774800" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:31:57.774800" elapsed="0.246943"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=h3.form-title</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:31:58.022738" elapsed="0.015344"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:58.066796" level="INFO">Element 'css=h3.form-title' contains text 'Formulário de Registro'.</msg>
+<arg>css=h3.form-title</arg>
+<arg>Formulário de Registro</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:58.039077" elapsed="0.027719"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=span[data-valmsg-for='Senha']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:31:58.067813" elapsed="0.023246"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:31:58.109227" level="INFO">Element 'css=span[data-valmsg-for='Senha']' contains text 'O campo Senha é obrigatório.'.</msg>
+<arg>css=span[data-valmsg-for='Senha']</arg>
+<arg>${ERRO_SENHA_OBRIGATORIO}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:31:58.092060" elapsed="0.017167"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Teste de Senha Vazia: Falhou como esperado.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:31:58.110222" elapsed="0.001228"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:31:58.112607" elapsed="2.229214"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:31:55.126806" elapsed="5.216014"/>
+</test>
+<test id="s1-s2-t7" name="CT07_Registro_Confirmacao_Senha_Nao_Preenchido" line="165">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:00.347385" level="INFO">${full_url} = https://localhost:7138/Account/Register</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:32:00.347385" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:00.348373" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Register'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:32:00.348373" elapsed="1.948555"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.296928" elapsed="0.028980"/>
+</kw>
+<arg>${REGISTER_URL}</arg>
+<status status="PASS" start="2025-07-03T18:32:00.346363" elapsed="1.980534"/>
+</kw>
+<kw name="Gerar Dados De Registro" owner="common_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:32:02.328896" level="INFO">${NOME_COMPLETO} = deHAotPqyNgDhi0</msg>
+<var>${NOME_COMPLETO}</var>
+<arg>15</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.328896" elapsed="0.000000"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-07-03T18:32:02.329895" level="INFO">${TIMESTAMP} = 20250703183202</msg>
+<var>${TIMESTAMP}</var>
+<arg>result_format=%Y%m%d%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.329895" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:02.330902" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183202@robotframework.com</msg>
+<var>${EMAIL_ALEATORIO}</var>
+<arg>SEPARATOR=</arg>
+<arg>teste_</arg>
+<arg>${TIMESTAMP}</arg>
+<arg>@robotframework.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.330902" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:32:02.331901" level="INFO">${SENHA_ALEATORIA} = fKVTrYUYzd</msg>
+<var>${SENHA_ALEATORIA}</var>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS][SYMBOLS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.330902" elapsed="0.000999"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:02.332895" level="INFO">${MATRICULA_ALEATORIA} = 831455982</msg>
+<var>${MATRICULA_ALEATORIA}</var>
+<arg>random.randint(100000000, 999999999)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.331901" elapsed="0.000994"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:02.333894" level="INFO">${SEMESTRE_ALEATORIO} = 01</msg>
+<var>${SEMESTRE_ALEATORIO}</var>
+<arg>random.choice(['01', '02'])</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.332895" elapsed="0.000999"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:02.333894" level="INFO">${ANO_ALEATORIO} = 2023</msg>
+<var>${ANO_ALEATORIO}</var>
+<arg>random.randint(2015, 2025)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.333894" elapsed="0.000999"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-07-03T18:32:02.334893" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${NOME_COMPLETO}</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.334893" elapsed="0.000000"/>
+</kw>
+<msg time="2025-07-03T18:32:02.336900" level="INFO">${NOME_COMPLETO} = deHAotPqyNgDhi0</msg>
+<msg time="2025-07-03T18:32:02.336900" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183202@robotframework.com</msg>
+<msg time="2025-07-03T18:32:02.336900" level="INFO">${SENHA_ALEATORIA} = fKVTrYUYzd</msg>
+<msg time="2025-07-03T18:32:02.336900" level="INFO">${MATRICULA_ALEATORIA} = 831455982</msg>
+<msg time="2025-07-03T18:32:02.336900" level="INFO">${SEMESTRE_ALEATORIO} = 01</msg>
+<msg time="2025-07-03T18:32:02.336900" level="INFO">${ANO_ALEATORIO} = 2023</msg>
+<var>${NOME_COMPLETO}</var>
+<var>${EMAIL_ALEATORIO}</var>
+<var>${SENHA_ALEATORIA}</var>
+<var>${MATRICULA_ALEATORIA}</var>
+<var>${SEMESTRE_ALEATORIO}</var>
+<var>${ANO_ALEATORIO}</var>
+<status status="PASS" start="2025-07-03T18:32:02.326897" elapsed="0.010003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:02.338893" level="INFO">Typing text 'deHAotPqyNgDhi0' into text field 'id=Nome'.</msg>
+<arg>id=Nome</arg>
+<arg>${NOME_COMPLETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.337893" elapsed="0.181991"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:02.520884" level="INFO">Typing text 'teste_20250703183202@robotframework.com' into text field 'id=Email'.</msg>
+<arg>id=Email</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.519884" elapsed="0.134536"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:02.656419" level="INFO">Selecting options from selection list 'id=SemestreEntrada' by value 01.</msg>
+<arg>id=SemestreEntrada</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.655424" elapsed="0.082556"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:02.739211" level="INFO">Selecting options from selection list 'id=AnoEntrada' by value 2023.</msg>
+<arg>id=AnoEntrada</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.737980" elapsed="0.083945"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:02.822823" level="INFO">Typing text 'fKVTrYUYzd' into text field 'id=Senha'.</msg>
+<arg>id=Senha</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.822823" elapsed="0.157486"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:02.980309" level="INFO">Typing text '831455982' into text field 'id=Matricula'.</msg>
+<arg>id=Matricula</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:02.980309" elapsed="0.081265"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:03.062700" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:03.061574" elapsed="0.137161"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=h3.form-title</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:32:03.199737" elapsed="0.069742"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:03.298906" level="INFO">Element 'css=h3.form-title' contains text 'Formulário de Registro'.</msg>
+<arg>css=h3.form-title</arg>
+<arg>Formulário de Registro</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:32:03.270480" elapsed="0.028426"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=span[data-valmsg-for='ConfirmacaoSenha']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:32:03.299932" elapsed="0.033958"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:03.356844" level="INFO">Element 'css=span[data-valmsg-for='ConfirmacaoSenha']' contains text 'O campo Confirme a Senha é obrigatório.'.</msg>
+<arg>css=span[data-valmsg-for='ConfirmacaoSenha']</arg>
+<arg>${ERRO_CONFIRMACAO_SENHA_OBRIGATORIO}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:32:03.334933" elapsed="0.021911"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Teste de Confirmar Senha Vazia: Falhou como esperado.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:32:03.357839" elapsed="0.001008"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:32:03.359836" elapsed="2.220455"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:32:00.345368" elapsed="5.234923"/>
+</test>
+<test id="s1-s2-t8" name="CT08_Registro_Senhas_Nao_Coincidem" line="190">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:05.585303" level="INFO">${full_url} = https://localhost:7138/Account/Register</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:32:05.585303" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:05.586306" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Register'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:32:05.586306" elapsed="1.954565"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:32:07.541884" elapsed="0.033308"/>
+</kw>
+<arg>${REGISTER_URL}</arg>
+<status status="PASS" start="2025-07-03T18:32:05.584302" elapsed="1.990890"/>
+</kw>
+<kw name="Gerar Dados De Registro" owner="common_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:32:07.577221" level="INFO">${NOME_COMPLETO} = EKeMNWls2Qs5tKT</msg>
+<var>${NOME_COMPLETO}</var>
+<arg>15</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:32:07.577221" elapsed="0.000000"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-07-03T18:32:07.578216" level="INFO">${TIMESTAMP} = 20250703183207</msg>
+<var>${TIMESTAMP}</var>
+<arg>result_format=%Y%m%d%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-07-03T18:32:07.578216" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:07.579217" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183207@robotframework.com</msg>
+<var>${EMAIL_ALEATORIO}</var>
+<arg>SEPARATOR=</arg>
+<arg>teste_</arg>
+<arg>${TIMESTAMP}</arg>
+<arg>@robotframework.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:32:07.579217" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:32:07.580214" level="INFO">${SENHA_ALEATORIA} = D4O3Kd9Iau</msg>
+<var>${SENHA_ALEATORIA}</var>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS][SYMBOLS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:32:07.580214" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:07.581213" level="INFO">${MATRICULA_ALEATORIA} = 754358472</msg>
+<var>${MATRICULA_ALEATORIA}</var>
+<arg>random.randint(100000000, 999999999)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:32:07.580214" elapsed="0.000999"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:07.582243" level="INFO">${SEMESTRE_ALEATORIO} = 02</msg>
+<var>${SEMESTRE_ALEATORIO}</var>
+<arg>random.choice(['01', '02'])</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:32:07.581213" elapsed="0.001030"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:07.583224" level="INFO">${ANO_ALEATORIO} = 2022</msg>
+<var>${ANO_ALEATORIO}</var>
+<arg>random.randint(2015, 2025)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:32:07.582243" elapsed="0.000981"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-07-03T18:32:07.583224" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${NOME_COMPLETO}</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-07-03T18:32:07.583224" elapsed="0.000993"/>
+</kw>
+<msg time="2025-07-03T18:32:07.584217" level="INFO">${NOME_COMPLETO} = EKeMNWls2Qs5tKT</msg>
+<msg time="2025-07-03T18:32:07.585213" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183207@robotframework.com</msg>
+<msg time="2025-07-03T18:32:07.585213" level="INFO">${SENHA_ALEATORIA_BASE} = D4O3Kd9Iau</msg>
+<msg time="2025-07-03T18:32:07.585213" level="INFO">${MATRICULA_ALEATORIA} = 754358472</msg>
+<msg time="2025-07-03T18:32:07.585213" level="INFO">${SEMESTRE_ALEATORIO} = 02</msg>
+<msg time="2025-07-03T18:32:07.585213" level="INFO">${ANO_ALEATORIO} = 2022</msg>
+<var>${NOME_COMPLETO}</var>
+<var>${EMAIL_ALEATORIO}</var>
+<var>${SENHA_ALEATORIA_BASE}</var>
+<var>${MATRICULA_ALEATORIA}</var>
+<var>${SEMESTRE_ALEATORIO}</var>
+<var>${ANO_ALEATORIO}</var>
+<status status="PASS" start="2025-07-03T18:32:07.576211" elapsed="0.009002"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:32:07.586219" level="INFO">${SENHA_DIFERENTE} = mmOnbbFysY</msg>
+<var>${SENHA_DIFERENTE}</var>
+<arg>10</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:32:07.585213" elapsed="0.001006"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:07.588246" level="INFO">Typing text 'EKeMNWls2Qs5tKT' into text field 'id=Nome'.</msg>
+<arg>id=Nome</arg>
+<arg>${NOME_COMPLETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:07.587241" elapsed="0.160796"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:07.748706" level="INFO">Typing text 'teste_20250703183207@robotframework.com' into text field 'id=Email'.</msg>
+<arg>id=Email</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:07.748706" elapsed="0.125826"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:07.875542" level="INFO">Selecting options from selection list 'id=SemestreEntrada' by value 02.</msg>
+<arg>id=SemestreEntrada</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:32:07.875542" elapsed="0.080938"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:07.958476" level="INFO">Selecting options from selection list 'id=AnoEntrada' by value 2022.</msg>
+<arg>id=AnoEntrada</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:32:07.957470" elapsed="0.075623"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:08.034066" level="INFO">Typing text 'D4O3Kd9Iau' into text field 'id=Senha'.</msg>
+<arg>id=Senha</arg>
+<arg>${SENHA_ALEATORIA_BASE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:08.033093" elapsed="0.102342"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:08.136430" level="INFO">Typing text 'mmOnbbFysY' into text field 'id=ConfirmacaoSenha'.</msg>
+<arg>id=ConfirmacaoSenha</arg>
+<arg>${SENHA_DIFERENTE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:08.136430" elapsed="0.096348"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:08.234786" level="INFO">Typing text '754358472' into text field 'id=Matricula'.</msg>
+<arg>id=Matricula</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:08.233785" elapsed="0.085944"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:08.320732" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:08.319729" elapsed="0.132206"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=h3.form-title</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:32:08.452938" elapsed="0.065785"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:08.549725" level="INFO">Element 'css=h3.form-title' contains text 'Formulário de Registro'.</msg>
+<arg>css=h3.form-title</arg>
+<arg>Formulário de Registro</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:32:08.518723" elapsed="0.031002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=span[data-valmsg-for='ConfirmacaoSenha']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:32:08.550769" elapsed="0.027989"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:08.599801" level="INFO">Element 'css=span[data-valmsg-for='ConfirmacaoSenha']' contains text 'As senhas não coincidem.'.</msg>
+<arg>css=span[data-valmsg-for='ConfirmacaoSenha']</arg>
+<arg>${ERRO_SENHAS_NAO_COINCIDEM}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:32:08.579778" elapsed="0.020023"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Teste de Senhas Não Coincidem: Falhou como esperado.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:32:08.601778" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:32:08.603786" elapsed="2.330282"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:32:05.582352" elapsed="5.352711"/>
+</test>
+<test id="s1-s2-t9" name="CT09_Registro_Matricula_Nao_Preenchida" line="217">
+<kw name="Abrir Navegador na URL Base" owner="common_keywords" type="SETUP">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:10.939155" level="INFO">${full_url} = https://localhost:7138/Account/Register</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${BASE_URL}</arg>
+<arg>${url}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:32:10.938070" elapsed="0.001085"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:10.941146" level="INFO">Opening browser 'Chrome' to base url 'https://localhost:7138/Account/Register'.</msg>
+<arg>${full_url}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-03T18:32:10.940154" elapsed="1.472347"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-03T18:32:12.413491" elapsed="0.445700"/>
+</kw>
+<arg>${REGISTER_URL}</arg>
+<status status="PASS" start="2025-07-03T18:32:10.937150" elapsed="1.922041"/>
+</kw>
+<kw name="Gerar Dados De Registro" owner="common_keywords">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:32:12.861203" level="INFO">${NOME_COMPLETO} = jC15Sf4ZfOgVUn8</msg>
+<var>${NOME_COMPLETO}</var>
+<arg>15</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:32:12.861203" elapsed="0.000000"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-07-03T18:32:12.862512" level="INFO">${TIMESTAMP} = 20250703183212</msg>
+<var>${TIMESTAMP}</var>
+<arg>result_format=%Y%m%d%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-07-03T18:32:12.862512" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:12.863686" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183212@robotframework.com</msg>
+<var>${EMAIL_ALEATORIO}</var>
+<arg>SEPARATOR=</arg>
+<arg>teste_</arg>
+<arg>${TIMESTAMP}</arg>
+<arg>@robotframework.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2025-07-03T18:32:12.862512" elapsed="0.001174"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-03T18:32:12.863686" level="INFO">${SENHA_ALEATORIA} = IT[mK8x[a6</msg>
+<var>${SENHA_ALEATORIA}</var>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS][SYMBOLS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-03T18:32:12.863686" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:12.865696" level="INFO">${MATRICULA_ALEATORIA} = 706794944</msg>
+<var>${MATRICULA_ALEATORIA}</var>
+<arg>random.randint(100000000, 999999999)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:32:12.864693" elapsed="0.001003"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:12.867693" level="INFO">${SEMESTRE_ALEATORIO} = 01</msg>
+<var>${SEMESTRE_ALEATORIO}</var>
+<arg>random.choice(['01', '02'])</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:32:12.866693" elapsed="0.001000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-03T18:32:12.868702" level="INFO">${ANO_ALEATORIO} = 2022</msg>
+<var>${ANO_ALEATORIO}</var>
+<arg>random.randint(2015, 2025)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-03T18:32:12.867693" elapsed="0.001009"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-07-03T18:32:12.869695" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${NOME_COMPLETO}</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<arg>${MATRICULA_ALEATORIA}</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-07-03T18:32:12.869695" elapsed="0.000000"/>
+</kw>
+<msg time="2025-07-03T18:32:12.870695" level="INFO">${NOME_COMPLETO} = jC15Sf4ZfOgVUn8</msg>
+<msg time="2025-07-03T18:32:12.870695" level="INFO">${EMAIL_ALEATORIO} = teste_20250703183212@robotframework.com</msg>
+<msg time="2025-07-03T18:32:12.871706" level="INFO">${SENHA_ALEATORIA} = IT[mK8x[a6</msg>
+<msg time="2025-07-03T18:32:12.871706" level="INFO">${MATRICULA_ALEATORIA} = 706794944</msg>
+<msg time="2025-07-03T18:32:12.871706" level="INFO">${SEMESTRE_ALEATORIO} = 01</msg>
+<msg time="2025-07-03T18:32:12.871706" level="INFO">${ANO_ALEATORIO} = 2022</msg>
+<var>${NOME_COMPLETO}</var>
+<var>${EMAIL_ALEATORIO}</var>
+<var>${SENHA_ALEATORIA}</var>
+<var>${MATRICULA_ALEATORIA}</var>
+<var>${SEMESTRE_ALEATORIO}</var>
+<var>${ANO_ALEATORIO}</var>
+<status status="PASS" start="2025-07-03T18:32:12.860201" elapsed="0.011505"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:12.873700" level="INFO">Typing text 'jC15Sf4ZfOgVUn8' into text field 'id=Nome'.</msg>
+<arg>id=Nome</arg>
+<arg>${NOME_COMPLETO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:12.872700" elapsed="0.143913"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:13.017614" level="INFO">Typing text 'teste_20250703183212@robotframework.com' into text field 'id=Email'.</msg>
+<arg>id=Email</arg>
+<arg>${EMAIL_ALEATORIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:13.016613" elapsed="0.120901"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:13.138519" level="INFO">Selecting options from selection list 'id=SemestreEntrada' by value 01.</msg>
+<arg>id=SemestreEntrada</arg>
+<arg>${SEMESTRE_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:32:13.137514" elapsed="0.093293"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:13.232802" level="INFO">Selecting options from selection list 'id=AnoEntrada' by value 2022.</msg>
+<arg>id=AnoEntrada</arg>
+<arg>${ANO_ALEATORIO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-03T18:32:13.231798" elapsed="0.076709"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:13.310510" level="INFO">Typing text 'IT[mK8x[a6' into text field 'id=Senha'.</msg>
+<arg>id=Senha</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:13.309508" elapsed="0.092416"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:13.402941" level="INFO">Typing text 'IT[mK8x[a6' into text field 'id=ConfirmacaoSenha'.</msg>
+<arg>id=ConfirmacaoSenha</arg>
+<arg>${SENHA_ALEATORIA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:13.402941" elapsed="0.082739"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:13.486675" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>css=button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-03T18:32:13.486675" elapsed="0.108470"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=h3.form-title</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-03T18:32:13.596145" elapsed="0.068238"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:13.689947" level="INFO">Element 'css=h3.form-title' contains text 'Formulário de Registro'.</msg>
+<arg>css=h3.form-title</arg>
+<arg>Formulário de Registro</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:32:13.665373" elapsed="0.024574"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=span[data-valmsg-for='Matricula']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-03T18:32:13.690958" elapsed="0.026548"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-03T18:32:13.734150" level="INFO">Element 'css=span[data-valmsg-for='Matricula']' contains text 'O campo Matrícula é obrigatório.'.</msg>
+<arg>css=span[data-valmsg-for='Matricula']</arg>
+<arg>${ERRO_MATRICULA_OBRIGATORIO}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-07-03T18:32:13.718495" elapsed="0.015655"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Teste de Matrícula Vazia: Falhou como esperado.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-03T18:32:13.735147" elapsed="0.001001"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-03T18:32:13.737149" elapsed="2.225527"/>
+</kw>
+<status status="PASS" start="2025-07-03T18:32:10.936068" elapsed="5.027603"/>
+</test>
+<status status="PASS" start="2025-07-03T18:31:28.678242" elapsed="47.287424"/>
+</suite>
+<status status="PASS" start="2025-07-03T18:30:19.576738" elapsed="116.391933"/>
+</suite>
+<statistics>
+<total>
+<stat pass="17" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="17" fail="0" skip="0">Tests</stat>
+<stat name="Login Tests" id="s1-s1" pass="8" fail="0" skip="0">Tests.Login Tests</stat>
+<stat name="Register Tests" id="s1-s2" pass="9" fail="0" skip="0">Tests.Register Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
