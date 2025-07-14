@@ -5,7 +5,7 @@ Test Setup           Abrir Navegador na URL Base      ${LOGIN_URL}
 Test Teardown        Close Browser
 
 ***Variables***
-${MATRICULA_VALIDA}      202016480
+${MATRICULA_VALIDA}      202016481
 ${SENHA_VALIDA}          senha1234
 ${MATRICULA_INVALIDA}    999999999
 ${SENHA_INVALIDA}        senhaerrada
