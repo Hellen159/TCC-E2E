@@ -19,6 +19,14 @@ ${MSG_ERRO_NENHUMA_SELECAO}    Erro: Selecione os horários antes de enviar a di
 ${CSS_INFO}               css=div.alert.alert-info.alert-dismissible.fade.show   
 
 ${CLASS_CELULA_SELECIONADA}       selecionada 
+${CHECKBOX_TCC2_LOCATOR}=    css:input[type="checkbox"][data-codigounicoturma="668"]
+${CHECKBOX_TCC2_SELECTOR_JS}=    input[type="checkbox"][data-codigounicoturma="668"]
+${CHECKBOX_TCC2_LOCATOR_SELENIUM}=    xpath://div[@class="linha" and .//div[@title="TRABALHO DE CONCLUSAO DE CURSO 2"] and .//div[@title="VINICIUS RICARDO MARQUES DE SOUZA"]]//input[@type="checkbox" and @data-codigounicoturma="668"]
+
+
+
+${TURMAS_OBRIGATORIAS_CONTAINER}=    xpath://div[contains(@class, 'card') and .//div[contains(@class, 'card-header') and contains(text(), 'Turmas Obrigatórias Disponíveis')]]//div[contains(@class, 'tabela-turmas')]
+
 
 ***Test Cases***
 CT01_Usuario_envia_disponibilidade_sucesso

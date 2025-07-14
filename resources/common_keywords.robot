@@ -138,3 +138,13 @@ Clicar Botao Limpar Selecao
     Click Button    ${locator}
     
     Log To Console    Botão 'Limpar Seleção' clicado.
+
+
+Clicar Botao Salvar Grade
+    ${locator}=    Set Variable    xpath=//button[@type='button' and text()='Salvar Grade']
+
+    Scroll Element Into View    ${locator}
+    Wait Until Element Is Visible    ${locator}
+    Click Button    ${locator}
+    
+    Log To Console    Botão 'Salvar Grade' clicado.
